@@ -7,14 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-
-
-
-
-
-
-
-
+# 10 "main.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5736,7 +5729,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
+# 10 "main.c" 2
 
 
 #pragma config FOSC = HS
@@ -5750,17 +5743,26 @@ unsigned char __t3rd16on(void);
 
 
 
+unsigned char led1Status = 0;
+
 void pinConfig()
 {
-    TRISBbits.RB4 = 1;
-    TRISDbits.RD0 = 0;
+    TRISBbits.TRISB4 = 1;
+    TRISDbits.TRISD0 = 0;
+    PORTDbits.RD0 = 0;
+    LATDbits.LATD0 = 0;
 }
 
 void main(void) {
     pinConfig();
     while(1)
     {
-        LATDbits.LATD0 = LATBbits.LATB4;
+        if(PORTBbits.RB4 == 0)
+        {
+            _delay((unsigned long)((300)*(20000000/4000.0)));
+            LATDbits.LATD0 = ~LATDbits.LATD0;
+        }
     }
+
     return;
 }

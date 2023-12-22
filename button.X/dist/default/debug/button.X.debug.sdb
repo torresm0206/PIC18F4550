@@ -27,32 +27,58 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"22 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\button.X\main.c
+"25 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\button.X\main.c
 [v _pinConfig pinConfig `(v  1 e 1 0 ]
-"28
+"33
 [v _main main `(v  1 e 1 0 ]
-[s S144 . 1 `uc 1 LATB0 1 0 :1:0 
-`uc 1 LATB1 1 0 :1:1 
-`uc 1 LATB2 1 0 :1:2 
-`uc 1 LATB3 1 0 :1:3 
-`uc 1 LATB4 1 0 :1:4 
-`uc 1 LATB5 1 0 :1:5 
-`uc 1 LATB6 1 0 :1:6 
-`uc 1 LATB7 1 0 :1:7 
+[s S33 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
 ]
-"3100 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4550.h
-[s S153 . 1 `uc 1 LB0 1 0 :1:0 
-`uc 1 LB1 1 0 :1:1 
-`uc 1 LB2 1 0 :1:2 
-`uc 1 LB3 1 0 :1:3 
-`uc 1 LB4 1 0 :1:4 
-`uc 1 LB5 1 0 :1:5 
-`uc 1 LB6 1 0 :1:6 
-`uc 1 LB7 1 0 :1:7 
+"2483 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4550.h
+[s S200 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
 ]
-[u S162 . 1 `S144 1 . 1 0 `S153 1 . 1 0 ]
-[v _LATBbits LATBbits `VES162  1 e 1 @3978 ]
-[s S104 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S208 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S211 . 1 `S33 1 . 1 0 `S200 1 . 1 0 `S208 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES211  1 e 1 @3969 ]
+[s S73 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2736
+[s S113 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S122 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S125 . 1 `S73 1 . 1 0 `S113 1 . 1 0 `S122 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES125  1 e 1 @3971 ]
+[s S151 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -62,7 +88,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "3290
-[s S113 . 1 `uc 1 LD0 1 0 :1:0 
+[s S160 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -71,8 +97,8 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S122 . 1 `S104 1 . 1 0 `S113 1 . 1 0 ]
-[v _LATDbits LATDbits `VES122  1 e 1 @3980 ]
+[u S169 . 1 `S151 1 . 1 0 `S160 1 . 1 0 ]
+[v _LATDbits LATDbits `VES169  1 e 1 @3980 ]
 [s S24 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
@@ -83,15 +109,6 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "3657
-[s S33 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
 [u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES42  1 e 1 @3987 ]
 [s S64 . 1 `uc 1 TRISD0 1 0 :1:0 
@@ -104,24 +121,15 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "4033
-[s S73 . 1 `uc 1 RD0 1 0 :1:0 
-`uc 1 RD1 1 0 :1:1 
-`uc 1 RD2 1 0 :1:2 
-`uc 1 RD3 1 0 :1:3 
-`uc 1 RD4 1 0 :1:4 
-`uc 1 RD5 1 0 :1:5 
-`uc 1 RD6 1 0 :1:6 
-`uc 1 RD7 1 0 :1:7 
-]
 [u S82 . 1 `S64 1 . 1 0 `S73 1 . 1 0 ]
 [v _TRISDbits TRISDbits `VES82  1 e 1 @3989 ]
-"28 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\button.X\main.c
+"33 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\button.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"35
+"45
 } 0
-"22
+"25
 [v _pinConfig pinConfig `(v  1 e 1 0 ]
 {
-"26
+"31
 } 0

@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\torre\AppData\Local\Temp\xcAsl4k.\driver_tmp_3.o
+ C:\Users\torre\AppData\Local\Temp\xcAs1js.\driver_tmp_3.o
  -Odist/default/debug\button.X.debug.hex
  -logfile=dist/default/debug\button.X.debug.hxl
  -addressing=1
@@ -9,17 +9,17 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 5h		(C:\Users\torre\AppData\Local\Temp\xcAsl4k.\driver_tmp_3.o)
-  800h - 823h		(C:\Users\torre\AppData\Local\Temp\xcAsl4k.\driver_tmp_3.o)
-  300000h - 300005h		(C:\Users\torre\AppData\Local\Temp\xcAsl4k.\driver_tmp_3.o)
+  0h - 5h		(C:\Users\torre\AppData\Local\Temp\xcAs1js.\driver_tmp_3.o)
+  800h - 863h		(C:\Users\torre\AppData\Local\Temp\xcAs1js.\driver_tmp_3.o)
+  300000h - 300005h		(C:\Users\torre\AppData\Local\Temp\xcAs1js.\driver_tmp_3.o)
  Unused ranges:
   6h - 7FFh
-  824h - 2FFFFFh
+  864h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\torre\AppData\Local\Temp\xcAsl4k.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\torre\AppData\Local\Temp\xcAs1js.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -27,7 +27,11 @@
 ----------------------------------------------------------
 00000800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000820 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
+00000820 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000830 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000850 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000860 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
 00300010 | --
