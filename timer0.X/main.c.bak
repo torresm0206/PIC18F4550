@@ -1,7 +1,7 @@
 /*
  * File:   main.c
  * Author: José Manuel Torres Rivera
- *This program uses the Timer0 to generate a 10ms Delay function
+ *
  * Created on 22 de diciembre de 2023, 02:47 AM
  */
 #include <xc.h>

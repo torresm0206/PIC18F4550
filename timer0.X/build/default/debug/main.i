@@ -5747,9 +5747,13 @@ unsigned char __t3rd16on(void);
 
 
 
+
+
 void pinConfig()
 {
     TRISDbits.TRISD7 = 0;
+    TRISDbits.TRISD6 = 0;
+    TRISDbits.TRISD5 = 0;
     PORTD = 0x00;
 }
 
@@ -5763,27 +5767,111 @@ void timer0Config()
     TMR0L = 0xC4;
 }
 
-void miDelay()
+void miDelay(unsigned int miliSegundos)
 {
-    T0CONbits.TMR0ON = 1;
-    while(!INTCONbits.TMR0IF);
-    INTCONbits.TMR0IF = 0;
-    T0CONbits.TMR0ON = 0;
-    TMR0H = 0x3C;
-    TMR0L = 0xC4;
+    unsigned int desbordes;
+    desbordes = miliSegundos/10;
+    while(desbordes)
+    {
+        T0CONbits.TMR0ON = 1;
+        while(!INTCONbits.TMR0IF);
+        INTCONbits.TMR0IF = 0;
+        T0CONbits.TMR0ON = 0;
+        TMR0H = 0x3C;
+        TMR0L = 0xC4;
+        desbordes--;
+    }
 }
 
+void flashing(unsigned char luz)
+{
+    switch(luz)
+    {
+        case 'r':
+            LATDbits.LATD7 = 0;
+            miDelay(500);
+            LATDbits.LATD7 = 1;
+            miDelay(500);
+            LATDbits.LATD7 = 0;
+            miDelay(500);
+            LATDbits.LATD7 = 1;
+            miDelay(500);
+            LATDbits.LATD7 = 0;
+            miDelay(500);
+            LATDbits.LATD7 = 1;
+            miDelay(500);
+            LATDbits.LATD7 = 0;
+            miDelay(500);
+            break;
+        case 'a':
+            LATDbits.LATD6 = 0;
+            miDelay(500);
+            LATDbits.LATD6 = 1;
+            miDelay(500);
+            LATDbits.LATD6 = 0;
+            miDelay(500);
+            LATDbits.LATD6 = 1;
+            miDelay(500);
+            LATDbits.LATD6 = 0;
+            miDelay(500);
+            LATDbits.LATD6 = 1;
+            miDelay(500);
+            LATDbits.LATD6 = 0;
+            miDelay(1000);
+            break;
+        case 'v':
+            LATDbits.LATD5 = 0;
+            miDelay(500);
+            LATDbits.LATD5 = 1;
+            miDelay(500);
+            LATDbits.LATD5 = 0;
+            miDelay(500);
+            LATDbits.LATD5 = 1;
+            miDelay(500);
+            LATDbits.LATD5 = 0;
+            miDelay(500);
+            LATDbits.LATD5 = 1;
+            miDelay(500);
+            LATDbits.LATD5 = 0;
+            miDelay(500);
+            break;
+        default:
+            LATDbits.LATD6 = 0;
+            miDelay(500);
+            LATDbits.LATD6 = 1;
+            miDelay(500);
+            LATDbits.LATD6 = 0;
+            miDelay(500);
+            LATDbits.LATD6 = 1;
+            miDelay(500);
+            LATDbits.LATD6 = 0;
+            miDelay(500);
+            LATDbits.LATD6 = 1;
+            miDelay(500);
+            LATDbits.LATD6 = 0;
+            miDelay(1000);
+    }
+}
+
+void semaforo()
+{
+    LATDbits.LATD7 = 1;
+    miDelay(10000);
+    LATDbits.LATD7 = 0;
+    LATDbits.LATD5 = 1;
+    miDelay(10000);
+    LATDbits.LATD5 = 0;
+    LATDbits.LATD6 = 1;
+    miDelay(10000);
+    flashing('a');
+}
 void main(void) {
     pinConfig();
     timer0Config();
 
-    LATDbits.LATD7 = 0;
     while(1)
     {
-        miDelay();
-        LATDbits.LATD7 = 1;
-        miDelay();
-        LATDbits.LATD7 = 0;
+        semaforo();
     }
     return;
 }

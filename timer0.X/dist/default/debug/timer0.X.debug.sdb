@@ -15,6 +15,8 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -27,13 +29,17 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"19 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\timer0.X\main.c
+"21 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\timer0.X\main.c
 [v _pinConfig pinConfig `(v  1 e 1 0 ]
-"25
+"29
 [v _timer0Config timer0Config `(v  1 e 1 0 ]
-"35
+"39
 [v _miDelay miDelay `(v  1 e 1 0 ]
-"45
+"55
+[v _flashing flashing `(v  1 e 1 0 ]
+"125
+[v _semaforo semaforo `(v  1 e 1 0 ]
+"137
 [v _main main `(v  1 e 1 0 ]
 "2705 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4550.h
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
@@ -122,23 +128,52 @@
 ]
 [u S115 . 1 `S93 1 . 1 0 `S102 1 . 1 0 `S111 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES115  1 e 1 @4082 ]
-"45 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\timer0.X\main.c
+"137 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\timer0.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"58
+"146
 } 0
-"25
+"29
 [v _timer0Config timer0Config `(v  1 e 1 0 ]
 {
-"33
+"37
 } 0
-"19
-[v _pinConfig pinConfig `(v  1 e 1 0 ]
+"125
+[v _semaforo semaforo `(v  1 e 1 0 ]
 {
-"23
+"136
 } 0
-"35
+"55
+[v _flashing flashing `(v  1 e 1 0 ]
+{
+[v flashing@luz luz `uc  1 a 1 wreg ]
+[v flashing@luz luz `uc  1 a 1 wreg ]
+[v flashing@luz luz `uc  1 a 1 13 ]
+"123
+} 0
+"39
 [v _miDelay miDelay `(v  1 e 1 0 ]
 {
-"43
+"41
+[v miDelay@desbordes desbordes `ui  1 a 2 9 ]
+"39
+[v miDelay@miliSegundos miliSegundos `ui  1 p 2 7 ]
+"53
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"30
+} 0
+"21 C:\Users\torre\OneDrive\Documentos\MpLabX\pic18F4550\BasicPrograms\timer0.X\main.c
+[v _pinConfig pinConfig `(v  1 e 1 0 ]
+{
+"27
 } 0
